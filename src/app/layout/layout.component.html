@@ -1,0 +1,13 @@
+<form [formGroup]="form" (submit)="submit()">
+  <div class="form-group">
+    <div *ngFor="let house of houseData">
+      <input type="checkbox" (change)="onChange(house.name, $event.target.checked)"/>
+      {{house.name}}
+    </div>
+  </div>
+  <div class="form-group">
+    <button type="submit" class="btn btn-primary">
+      Submit
+    </button>
+  </div>
+</form>
